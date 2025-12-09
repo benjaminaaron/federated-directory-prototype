@@ -1,7 +1,7 @@
-import { newStore, addTriple, storeToTurtle } from "@foerderfunke/sem-ops-utils"
+import { newStore, storeToTurtle, addTurtleToStore } from "@foerderfunke/sem-ops-utils"
 
 export {
     newStore,
-    addTriple,
+    addTurtleToStore,
     storeToTurtle
 }

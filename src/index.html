@@ -5,14 +5,31 @@
         <title>Föderiertes Verzeichnis</title>
         <script src="./assets/bundle.js" type="module"></script>
         <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
         </style>
     </head>
     <body>
-        TODO
+    <h3>Prototyp eines föderierten Verzeichnisses</h3>
+    TODO
         <script type="module">
-            import { newStore, addTriple, storeToTurtle } from "./assets/bundle.js"
+            import { newStore, storeToTurtle, addTurtleToStore } from "./assets/bundle.js"
+
+            const topLevelEndpoints = [
+                `./assets/caritas-db.ttl`,
+                `./assets/paritaetische-db.ttl`,
+                `./assets/dhs-db.ttl`
+            ]
+
             let store = newStore()
-            addTriple(store, "http://example.org/subject", "http://example.org/predicate", "Object value")
+            for (let endpoint of topLevelEndpoints) {
+                let response = await fetch(endpoint)
+                let turtle = await response.text()
+                await addTurtleToStore(store, turtle)
+            }
+
             console.log(await storeToTurtle(store))
         </script>
     </body>
