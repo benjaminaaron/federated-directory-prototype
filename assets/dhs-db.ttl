@@ -1,0 +1,19 @@
+@prefix org:     <https://civic-data.de/org/> .
+@prefix offer:   <https://civic-data.de/offer/> .
+@prefix meta:   <https://civic-data.de/meta/> .
+@prefix cpsv:    <http://purl.org/vocab/cpsv#> .
+@prefix schema:  <https://schema.org/> .
+
+meta:this meta:source meta:dhs-db .
+
+org:cafe-beispiellos
+    a                   schema:Organization ;
+    schema:name         "Cafe Beispiellos mobil" ;
+    schema:url          <https://gluecksspiel-berlin.de/> ;
+    schema:memberOf     org:caritas-berlin .
+
+offer:gluecksspiel-001
+    a                       cpsv:PublicService, schema:Service ;
+    schema:serviceType      "Frühintervention Glücksspiel" ;
+    schema:audienceType     "Betroffene", "Angehörige", "Menschen mit Migrationserfahrung" ;
+    cpsv:providedBy 		org:cafe-beispiellos .
