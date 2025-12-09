@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Föderiertes Verzeichnis</title>
+        <script src="./assets/bundle.js" type="module"></script>
+        <style>
+        </style>
+    </head>
+    <body>
+        TODO
+        <script type="module">
+            import { newStore, addTriple, storeToTurtle } from "./assets/bundle.js"
+            let store = newStore()
+            addTriple(store, "http://example.org/subject", "http://example.org/predicate", "Object value")
+            console.log(await storeToTurtle(store))
+        </script>
+    </body>
+</html>
