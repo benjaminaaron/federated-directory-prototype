@@ -1,7 +1,8 @@
-import { newStore, storeToTurtle, addTurtleToStore } from "@foerderfunke/sem-ops-utils"
+import { newStore, storeToTurtle, addTurtleToStore, sparqlSelect } from "@foerderfunke/sem-ops-utils"
 
 export {
     newStore,
     addTurtleToStore,
-    storeToTurtle
+    storeToTurtle,
+    sparqlSelect
 }

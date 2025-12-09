@@ -9,13 +9,24 @@
                 font-family: Arial, sans-serif;
                 margin: 20px;
             }
+            #fetch-table {
+                text-align: left;
+                border-spacing: 16px 8px;
+            }
         </style>
     </head>
     <body>
     <h3>Prototyp eines föderierten Verzeichnisses</h3>
     TODO
+    <br/><br/>
+    <input type="button" id="fetch-btn" value="Fetch offers" />
+    <br/><br/>
+    <table id="fetch-table"></table>
+
         <script type="module">
-            import { newStore, storeToTurtle, addTurtleToStore } from "./assets/bundle.js"
+            import { newStore, addTurtleToStore, sparqlSelect } from "./assets/bundle.js"
+
+            document.getElementById("fetch-btn").addEventListener("click", () => fetchOffers())
 
             const topLevelEndpoints = [
                 `./assets/caritas-db.ttl`,
@@ -30,7 +41,31 @@
                 await addTurtleToStore(store, turtle)
             }
 
-            console.log(await storeToTurtle(store))
+            const fetchOffers = async () => {
+                const query = `
+                    PREFIX schema: <https://schema.org/>
+                    PREFIX cpsv: <http://purl.org/vocab/cpsv#>
+                    PREFIX offer: <https://civic-data.de/offer/>
+                    SELECT ?organisation ?beratungsangebot WHERE {
+                        ?offer a schema:Service ;
+                            schema:serviceType ?beratungsangebot ;
+                            cpsv:providedBy ?org .
+                        ?org schema:name ?organisation .
+                    }`
+                let rows = await sparqlSelect(query, [store])
+                let table = document.getElementById("fetch-table")
+                table.innerHTML = "<tr><th>Organisation</th><th>Beratungsangebot</th></tr>"
+                for (let row of rows) {
+                    let tr = document.createElement("tr")
+                    let td = document.createElement("td")
+                    td.textContent = row.organisation
+                    tr.appendChild(td)
+                    td = document.createElement("td")
+                    td.textContent = row.beratungsangebot
+                    tr.appendChild(td)
+                    table.appendChild(tr)
+                }
+            }
         </script>
     </body>
 </html>
