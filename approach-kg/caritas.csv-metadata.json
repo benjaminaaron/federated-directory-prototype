@@ -1,0 +1,93 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "caritas.csv",
+  "dialect": {
+    "delimiter": ",",
+    "encoding": "utf-8",
+    "header": true
+  },
+  "tableSchema": {
+    "aboutUrl": "https://civic-data.de/orgAddr_{Guid}",
+    "columns": [
+      {
+        "titles": "Format",
+        "propertyUrl": "http://schema.org/addressLocality"
+      },
+      {
+        "titles": "SubTitle",
+        "suppressOutput": true
+      },
+      {
+        "titles": "LeadLine",
+        "suppressOutput": true
+      },
+      {
+        "titles": "Teaser",
+        "propertyUrl": "http://schema.org/streetAddress"
+      },
+      {
+        "titles": "Link",
+        "propertyUrl": "http://schema.org/url",
+        "valueUrl": "https://www.caritas.de{+Link}"
+      },
+      {
+        "titles": "ViewType",
+        "suppressOutput": true
+      },
+      {
+        "titles": "ContentType",
+        "propertyUrl": "http://schema.org/contentType"
+      },
+      {
+        "titles": "ContentTypeGuid",
+        "suppressOutput": true
+      },
+      {
+        "titles": "Date",
+        "propertyUrl": "http://purl.org/dc/terms/modified",
+        "datatype": {
+          "base": "date",
+          "format": "M/d/yyyy"
+        }
+      },
+      {
+        "titles": "Index",
+        "suppressOutput": true
+      },
+      {
+        "titles": "Categories",
+        "suppressOutput": true
+      },
+      {
+        "titles": "OnlineConsultingUrl",
+        "suppressOutput": true
+      },
+      {
+        "titles": "Distance",
+        "suppressOutput": true
+      },
+      {
+        "titles": "SearchResultHtml",
+        "suppressOutput": true
+      },
+      {
+        "titles": "Title",
+        "propertyUrl": "http://www.w3.org/2004/02/skos/core#prefLabel"
+      },
+      {
+        "titles": "Guid",
+        "suppressOutput": true
+      },
+      {
+        "virtual": true,
+        "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "valueUrl": "http://www.w3.org/ns/org#Organization"
+      },
+      {
+        "virtual": true,
+        "propertyUrl": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "valueUrl": "https://civic-data.de/OrgAddress"
+      }
+    ]
+  }
+}
