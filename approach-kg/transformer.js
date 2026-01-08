@@ -1,4 +1,4 @@
-import { addTriple, datasetToTurtle, getRdf, getWriter, newStore, storeFromTurtles, storeToTurtle } from "@foerderfunke/sem-ops-utils"
+import { addTriple, datasetToTurtle, getRdf, getWriter, newStore, storeFromTurtles, storeToTurtle, sparqlInsertDelete } from "@foerderfunke/sem-ops-utils"
 import CsvwParser from "rdf-parser-csvw"
 import { fileURLToPath } from "url"
 import { DOMParser } from "xmldom"
@@ -119,6 +119,19 @@ async function merge() {
         fs.readFileSync(`${OUT_DIR}/caritas.ttl`, "utf8"),
         fs.readFileSync(`${OUT_DIR}/dhs.ttl`, "utf8")
     ])
+
+    // postprocessing example
+    let query = `
+        PREFIX schema: <http://schema.org/>
+        PREFIX civic: <https://civic-data.de/>
+        INSERT {
+            ?org civic:orgInBerlin "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+        } WHERE {
+            ?org schema:contentType "Adresse" ;
+                schema:addressLocality ?loc .
+            FILTER regex(str(?loc), "berlin", "i")
+        }`
+    await sparqlInsertDelete(query, store)
     fs.writeFileSync(`${OUT_DIR}/merged.ttl`, await storeToTurtle(store), "utf8")
 
     /*const writer = getWriter(prefixes)
