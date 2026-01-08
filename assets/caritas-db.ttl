@@ -1,0 +1,34 @@
+@prefix org:     <https://civic-data.de/org/> .
+@prefix offer:   <https://civic-data.de/offer/> .
+@prefix place:   <https://civic-data.de/place/> .
+@prefix meta:   <https://civic-data.de/meta/> .
+@prefix cpsv:    <http://purl.org/vocab/cpsv#> . # Core Public Service Vocabulary
+@prefix schema:  <https://schema.org/> .
+
+meta:this meta:source meta:caritas-db .
+
+org:caritas-berlin
+    a               schema:Organization ;
+    schema:name     "Caritas Berlin" ;
+    schema:url     	<https://www.caritas-berlin.de> .
+
+place:caritas-berlin-mitte
+    a schema:Place ;
+    schema:name "Caritas Beratungszentrum Berlin-Mitte" ;
+    schema:containedInPlace org:caritas-berlin .
+
+offer:erz-fam-001
+    a                     cpsv:PublicService, schema:Service ;
+    schema:serviceType    "Erziehungs- und Familienberatung" ;
+    schema:category       "Soziale Beratung" ;
+    schema:audienceType   "Eltern", "Familien", "Kinder und Jugendliche" ;
+    cpsv:providedBy       org:caritas-berlin-mitte .
+
+offer:gluecksspiel-001
+    a                       cpsv:PublicService, schema:Service ;
+    schema:serviceType      "Frühintervention Glücksspiel" ;
+    schema:audienceType     "Betroffene", "Angehörige", "Menschen mit Migrationserfahrung" ;
+    offer:openingTimes	  	"Mo-Do 9:00-15:00" ;
+    cpsv:providedBy 		org:cafe-beispiellos .
+
+# << offer:erz-fam-001 a cpsv:PublicService >> meta:source meta:caritas-db .
