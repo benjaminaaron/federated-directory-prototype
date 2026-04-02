@@ -1,0 +1,31 @@
+@prefix civic: <https://civic-data.de/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix org: <http://www.w3.org/ns/org#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix schema: <http://schema.org/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+
+civic:orgAddr_85303b4dcb4d3d4f96ff6a5e9b2fdd8b a org:PublicOrganisation, civic:OrgAddress;
+  schema:streetAddress "Chausseestraße 128/129";
+  skos:prefLabel "Fachstelle für Suchtprävention Berlin gGmbH";
+  org:postalCode "10115 Berlin";
+  org:telephone "030 29352615";
+  foaf:homepage <http://www.berlin-suchtpraevention.de>;
+  foaf:mbox "info(at)berlin-suchtpraevention.de".
+
+civic:orgAddr_ba60da2713e78c722d364e2e89fe8352 a org:PublicOrganisation, civic:OrgAddress;
+  schema:description "Integratives Suchtzentrum Mitte";
+  schema:streetAddress "Große Hamburger Straße 18";
+  skos:prefLabel "Caritasverband für das Erzbistum Berlin e.V.";
+  org:postalCode "10115 Berlin";
+  org:telephone "030 666 33-400 / -401";
+  foaf:homepage <https://www.caritas-berlin.de>;
+  foaf:mbox "sucht-gr.hamburger(at)caritas-berlin.de".
+
+civic:orgAddr_e96f8be967a6fac57f064a9e8b8db723 a org:PublicOrganisation, civic:OrgAddress;
+  schema:streetAddress "Chausseestraße 128/129";
+  skos:prefLabel "Berliner Präventionspraxis";
+  org:postalCode "10115 Berlin";
+  org:telephone "030 29 35 26 44";
+  foaf:homepage <http://www.berlin-suchtpraevention.de/projekte/berliner-praeventions-praxis-raus-aus-der-grauzone/>;
+  foaf:mbox "info(at)berlin-praeventionspraxis.de".

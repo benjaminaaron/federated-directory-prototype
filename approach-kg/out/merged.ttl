@@ -1,0 +1,158 @@
+@prefix civic: <https://civic-data.de/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix org: <http://www.w3.org/ns/org#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix schema: <http://schema.org/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+civic:orgAddr_11bc6887-01a5-4644-a173-b3318dec4ab4 a org:Organization, civic:OrgAddress;
+  dct:modified "2023-03-01"^^xsd:date;
+  schema:addressLocality "10115 Berlin";
+  schema:contentType "Adresse";
+  schema:streetAddress "Caroline-Michaelis-Str. 1 - 10115 Berlin";
+  schema:url <https://www.caritas.de/search.ashx?g=2184703f-b306-4595-9039-8ea375cbee09&p=1&r=11bc6887-01a5-4644-a173-b3318dec4ab4&u=http%253a%252f%252fwww.caritas.de%252fadressen%252fklima-kollekte-kirchlicher-kompensationsfonds-ggmb%252f10115-berlin%252f2408922%253fsearchterm%253d>;
+  skos:prefLabel "Klima-Kollekte - Kirchlicher Kompensationsfonds gGmbH";
+  civic:orgInBerlin true.
+
+civic:orgAddr_3b5aac64-df05-4dd4-9611-1f20eea15809 a org:Organization, civic:OrgAddress;
+  dct:modified "2019-11-18"^^xsd:date;
+  schema:addressLocality "10115 Berlin";
+  schema:contentType "Adresse";
+  schema:streetAddress "Chausseestr. 128/129 - 10115 Berlin";
+  schema:url <https://www.caritas.de/search.ashx?g=2184703f-b306-4595-9039-8ea375cbee09&p=12&r=3b5aac64-df05-4dd4-9611-1f20eea15809&u=http%253a%252f%252fwww.caritas.de%252fadressen%252fbundesarbeitsgemeinschaft-katholische-jugendsozial%252f10115-berlin%252f1580341%253fsearchterm%253d>;
+  skos:prefLabel "Bundesarbeitsgemeinschaft Katholische Jugendsozialarbeit e.V.";
+  civic:orgInBerlin true.
+
+civic:orgAddr_40569a0c-a4ad-497a-90f8-85423a7d0285 a org:Organization, civic:OrgAddress;
+  dct:modified "2008-04-15"^^xsd:date;
+  schema:addressLocality "10115 Berlin";
+  schema:contentType "Adresse";
+  schema:streetAddress "Große Hamburger Str. 5 - 11 - 10115 Berlin";
+  schema:url <https://www.caritas.de/search.ashx?g=2184703f-b306-4595-9039-8ea375cbee09&p=5&r=40569a0c-a4ad-497a-90f8-85423a7d0285&u=http%253a%252f%252fwww.caritas.de%252fadressen%252falexianer-akademie-fuer-gesundheits-und-krankenpfl%252fkrankenpflegeschule%252f10115-berlin%252f91843%253fsearchterm%253d>;
+  skos:prefLabel "Alexianer Akademie für Gesundheits- und Krankenpflege Berlin / Brandenburg";
+  civic:orgInBerlin true.
+
+civic:orgAddr_73689048-ab16-478e-9814-9ad2a9c5d45e a org:Organization, civic:OrgAddress;
+  dct:modified "2008-04-15"^^xsd:date;
+  schema:addressLocality "10115 Berlin";
+  schema:contentType "Adresse";
+  schema:streetAddress "Große Hamburger Str. 18 - 10115 Berlin";
+  schema:url <https://www.caritas.de/search.ashx?g=2184703f-b306-4595-9039-8ea375cbee09&p=6&r=73689048-ab16-478e-9814-9ad2a9c5d45e&u=http%253a%252f%252fwww.caritas.de%252fadressen%252fcaritasverband-fuer-das-erzbistum-berlin-e.-v.-int%252fambulante-rehabilitation-sucht-und-nachsorgecarita%252f10115-berlin%252f95109%253fsearchterm%253d>;
+  skos:prefLabel "Caritasverband für das Erzbistum Berlin e. V. Integrative Suchtberatung Mitte Große Hamburger Str. 18, 10115 Berlin";
+  civic:orgInBerlin true.
+
+civic:orgAddr_7eec405c-dafd-4bad-83ea-c8e6e067e516 a org:Organization, civic:OrgAddress;
+  dct:modified "2008-04-15"^^xsd:date;
+  schema:addressLocality "10115 Berlin";
+  schema:contentType "Adresse";
+  schema:streetAddress "Große Hamburger Str. 5 - 11 - 10115 Berlin";
+  schema:url <https://www.caritas.de/search.ashx?g=2184703f-b306-4595-9039-8ea375cbee09&p=9&r=7eec405c-dafd-4bad-83ea-c8e6e067e516&u=http%253a%252f%252fwww.caritas.de%252fadressen%252fst.-hedwig-krankenhaus%252f10115-berlin%252f102140%253fsearchterm%253d>;
+  skos:prefLabel "St. Hedwig-Krankenhaus";
+  civic:orgInBerlin true.
+
+civic:orgAddr_85303b4dcb4d3d4f96ff6a5e9b2fdd8b a org:PublicOrganisation, civic:OrgAddress;
+  schema:streetAddress "Chausseestraße 128/129";
+  skos:prefLabel "Fachstelle für Suchtprävention Berlin gGmbH";
+  org:postalCode "10115 Berlin";
+  org:telephone "030 29352615";
+  foaf:homepage <http://www.berlin-suchtpraevention.de>;
+  foaf:mbox "info(at)berlin-suchtpraevention.de".
+
+civic:orgAddr_88ef385e-ce55-43f8-a7e8-e5a19ae913d3 a org:Organization, civic:OrgAddress;
+  dct:modified "2008-04-15"^^xsd:date;
+  schema:addressLocality "10115 Berlin";
+  schema:contentType "Adresse";
+  schema:streetAddress "Große Hamburger Str. 18 - 10115 Berlin";
+  schema:url <https://www.caritas.de/search.ashx?g=2184703f-b306-4595-9039-8ea375cbee09&p=10&r=88ef385e-ce55-43f8-a7e8-e5a19ae913d3&u=http%253a%252f%252fwww.caritas.de%252fadressen%252fschuldner-und-insolvenzberatung-berlin-mitte%252fcaritas-erzbistum-berlin%252f10115-berlin%252f106508%253fsearchterm%253d>;
+  skos:prefLabel "Schuldner- und Insolvenzberatung Berlin-Mitte";
+  civic:orgInBerlin true.
+
+civic:orgAddr_a646b16b-dd47-48c8-a503-48bb23d574af a org:Organization, civic:OrgAddress;
+  dct:modified "2019-03-14"^^xsd:date;
+  schema:addressLocality "10115 Berlin";
+  schema:contentType "Adresse";
+  schema:url <https://www.caritas.de/search.ashx?g=2184703f-b306-4595-9039-8ea375cbee09&p=11&r=a646b16b-dd47-48c8-a503-48bb23d574af&u=http%253a%252f%252fwww.caritas.de%252fadressen%252fpsychosoziale-betreuung-fuer-substituierte%252f10115-berlin%252f1419789%253fsearchterm%253d>;
+  skos:prefLabel "Psychosoziale Betreuung für Substituierte";
+  civic:orgInBerlin true.
+
+civic:orgAddr_ad92a73e-8ca8-497b-b75a-75cd8b6ddb6e a org:Organization, civic:OrgAddress;
+  dct:modified "2008-04-15"^^xsd:date;
+  schema:addressLocality "10115 Berlin";
+  schema:contentType "Adresse";
+  schema:streetAddress "Große Hamburger Str. 18 - 10115 Berlin";
+  schema:url <https://www.caritas.de/search.ashx?g=2184703f-b306-4595-9039-8ea375cbee09&p=4&r=ad92a73e-8ca8-497b-b75a-75cd8b6ddb6e&u=http%253a%252f%252fwww.caritas.de%252fadressen%252fcaf-streetwork-nur-nach-hause%252fcaf-streetwork-nur-nach-hause..-treffpunkt-fuer-me%252f10115-berlin%252f89512%253fsearchterm%253d>;
+  skos:prefLabel "Café-Streetwork 'Nur Nach Hause...\"";
+  civic:orgInBerlin true.
+
+civic:orgAddr_ba60da2713e78c722d364e2e89fe8352 a org:PublicOrganisation, civic:OrgAddress;
+  schema:description "Integratives Suchtzentrum Mitte";
+  schema:streetAddress "Große Hamburger Straße 18";
+  skos:prefLabel "Caritasverband für das Erzbistum Berlin e.V.";
+  org:postalCode "10115 Berlin";
+  org:telephone "030 666 33-400 / -401";
+  foaf:homepage <https://www.caritas-berlin.de>;
+  foaf:mbox "sucht-gr.hamburger(at)caritas-berlin.de".
+
+civic:orgAddr_c72d636e-7a4f-4156-b0cb-1827234263ba a org:Organization, civic:OrgAddress;
+  dct:modified "2008-04-15"^^xsd:date;
+  schema:addressLocality "10115 Berlin";
+  schema:contentType "Adresse";
+  schema:streetAddress "Große Hamburger Str. 18 - 10115 Berlin";
+  schema:url <https://www.caritas.de/search.ashx?g=2184703f-b306-4595-9039-8ea375cbee09&p=2&r=c72d636e-7a4f-4156-b0cb-1827234263ba&u=http%253a%252f%252fwww.caritas.de%252fadressen%252fbetreutes-einzelwohnen-grosse-hamburger%252fcaritas-erzbistum-berlin-projekt-betreutes-einzelw%252f10115-berlin%252f75498%253fsearchterm%253d>;
+  skos:prefLabel "Betreutes Einzelwohnen Große Hamburger";
+  civic:orgInBerlin true.
+
+civic:orgAddr_d7c63113-1707-4d68-b764-5bcafe96597f a org:Organization, civic:OrgAddress;
+  dct:modified "2008-04-15"^^xsd:date;
+  schema:addressLocality "10115 Berlin";
+  schema:contentType "Adresse";
+  schema:streetAddress "Große Hamburger Str. 18 - 10115 Berlin";
+  schema:url <https://www.caritas.de/search.ashx?g=2184703f-b306-4595-9039-8ea375cbee09&p=3&r=d7c63113-1707-4d68-b764-5bcafe96597f&u=http%253a%252f%252fwww.caritas.de%252fadressen%252fhart-am-limit-halt%252fcaritas-erzbistum-berlin-fruehinterventionsprojekt%252f10115-berlin%252f85732%253fsearchterm%253d>;
+  skos:prefLabel "Hart am LimiT (HaLT)";
+  civic:orgInBerlin true.
+
+civic:orgAddr_e53ae44c-187f-4cf5-8ab8-7ec529dcd358 a org:Organization, civic:OrgAddress;
+  dct:modified "2015-05-05"^^xsd:date;
+  schema:addressLocality "10115 Berlin";
+  schema:contentType "Adresse";
+  schema:streetAddress "Große Hamburger Straße 5 - 10115 Berlin";
+  schema:url <https://www.caritas.de/search.ashx?g=2184703f-b306-4595-9039-8ea375cbee09&p=0&r=e53ae44c-187f-4cf5-8ab8-7ec529dcd358&u=http%253a%252f%252fwww.caritas.de%252fadressen%252fkatholischer-krankenhausverband-deutschlands-e.v%252f10115-berlin%252f603024%253fsearchterm%253d>;
+  skos:prefLabel "Katholischer Krankenhausverband Deutschlands e.V.";
+  civic:orgInBerlin true.
+
+civic:orgAddr_e96f8be967a6fac57f064a9e8b8db723 a org:PublicOrganisation, civic:OrgAddress;
+  schema:streetAddress "Chausseestraße 128/129";
+  skos:prefLabel "Berliner Präventionspraxis";
+  org:postalCode "10115 Berlin";
+  org:telephone "030 29 35 26 44";
+  foaf:homepage <http://www.berlin-suchtpraevention.de/projekte/berliner-praeventions-praxis-raus-aus-der-grauzone/>;
+  foaf:mbox "info(at)berlin-praeventionspraxis.de".
+
+civic:orgAddr_ef260d7a-7363-4b60-be06-dae217575567 a org:Organization, civic:OrgAddress;
+  dct:modified "2023-09-26"^^xsd:date;
+  schema:addressLocality "10115 Berlin";
+  schema:contentType "Adresse";
+  schema:streetAddress "Hannoversche Str. 5 - 10115 Berlin";
+  schema:url <https://www.caritas.de/search.ashx?g=2184703f-b306-4595-9039-8ea375cbee09&p=13&r=ef260d7a-7363-4b60-be06-dae217575567&u=http%253a%252f%252fwww.caritas.de%252fadressen%252fkommissariat-der-deutschen-bischoefe%252fkatholisches-buero-in-berlin%252f10115-berlin%252f2557311%253fsearchterm%253d>;
+  skos:prefLabel "Kommissariat der deutschen Bischöfe";
+  civic:orgInBerlin true.
+
+civic:orgAddr_f1da2711-9e0c-4498-988c-ab324f0c555e a org:Organization, civic:OrgAddress;
+  dct:modified "2008-04-15"^^xsd:date;
+  schema:addressLocality "10115 Berlin";
+  schema:contentType "Adresse";
+  schema:streetAddress "Große Hamburger Str. 18 - 10115 Berlin";
+  schema:url <https://www.caritas.de/search.ashx?g=2184703f-b306-4595-9039-8ea375cbee09&p=7&r=f1da2711-9e0c-4498-988c-ab324f0c555e&u=http%253a%252f%252fwww.caritas.de%252fadressen%252fcaritasverband-fuer-das-erzbistum-berlin-e.v.-inte%252fintegrative-suchtberatung-mitte%252f10115-berlin%252f97660%253fsearchterm%253d>;
+  skos:prefLabel "Caritasverband für das Erzbistum Berlin e.V., Integratives Suchtzentrum Mitte";
+  civic:orgInBerlin true.
+
+civic:orgAddr_f3b6307d-7c16-448f-9765-be3b428e14fc a org:Organization, civic:OrgAddress;
+  dct:modified "2008-04-15"^^xsd:date;
+  schema:addressLocality "10115 Berlin";
+  schema:contentType "Adresse";
+  schema:streetAddress "Große Hamburger Str. 18 - 10115 Berlin";
+  schema:url <https://www.caritas.de/search.ashx?g=2184703f-b306-4595-9039-8ea375cbee09&p=8&r=f3b6307d-7c16-448f-9765-be3b428e14fc&u=http%253a%252f%252fwww.caritas.de%252fadressen%252ferziehungs-und-familienberatung-mitte%252fcaritas-erzbistum-berlin%252f10115-berlin%252f100587%253fsearchterm%253d>;
+  skos:prefLabel "Erziehungs- und Familienberatung Mitte";
+  civic:orgInBerlin true.
