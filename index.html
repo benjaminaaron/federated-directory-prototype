@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Föderiertes Verzeichnis</title>
+        <script src="./assets/bundle.js" type="module"></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            #fetch-table {
+                text-align: left;
+                border-spacing: 16px 8px;
+            }
+        </style>
+    </head>
+    <body>
+    <h3>Prototyp eines föderierten Verzeichnisses sozialer Unterstützungsangebote</h3>
+    Im Hintergrund liegt keine zentrale Datenbank im Backend. Stattdessen werden unterschiedliche Datenquellen zusammengeführt, die einem gemeinsamen Datenschema folgen.
+    <br/><br/>
+    <input type="button" id="fetch-btn" value="Verzeichnis laden" />
+    <br/><br/>
+    <table id="fetch-table"></table>
+
+        <script type="module">
+            import { newStore, addTurtleToStore, sparqlSelect } from "./assets/bundle.js"
+
+            document.getElementById("fetch-btn").addEventListener("click", () => fetchOffers())
+
+            const topLevelEndpoints = [
+                `./assets/caritas-db.ttl`,
+                `./assets/paritaetische-db.ttl`,
+                `./assets/dhs-db.ttl`
+            ]
+
+            let store = newStore()
+            for (let endpoint of topLevelEndpoints) {
+                let response = await fetch(endpoint)
+                let turtle = await response.text()
+                await addTurtleToStore(store, turtle)
+            }
+
+            const fetchOffers = async () => {
+                const query = `
+                    PREFIX schema: <https://schema.org/>
+                    PREFIX cpsv: <http://purl.org/vocab/cpsv#>
+                    PREFIX offer: <https://civic-data.de/offer/>
+                    SELECT ?organisation ?beratungsangebot WHERE {
+                        ?offer a schema:Service ;
+                            schema:serviceType ?beratungsangebot ;
+                            cpsv:providedBy ?org .
+                        ?org schema:name ?organisation .
+                    }`
+                let rows = await sparqlSelect(query, [store])
+                let table = document.getElementById("fetch-table")
+                table.innerHTML = "<tr><th>Organisation</th><th>Beratungsangebot</th></tr>"
+                for (let row of rows) {
+                    let tr = document.createElement("tr")
+                    let td = document.createElement("td")
+                    td.textContent = row.organisation
+                    tr.appendChild(td)
+                    td = document.createElement("td")
+                    td.textContent = row.beratungsangebot
+                    tr.appendChild(td)
+                    table.appendChild(tr)
+                }
+            }
+        </script>
+    </body>
+</html>

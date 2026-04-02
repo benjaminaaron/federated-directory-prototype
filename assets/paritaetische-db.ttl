@@ -1,0 +1,47 @@
+@prefix org:     <https://civic-data.de/org/> .
+@prefix offer:   <https://civic-data.de/offer/> .
+@prefix meta:   <https://civic-data.de/meta/> .
+@prefix cpsv:    <http://purl.org/vocab/cpsv#> .
+@prefix schema:  <https://schema.org/> .
+
+meta:this meta:source meta:paritaetische-db .
+
+org:kobra-berlin
+    a                   schema:Organization ;
+    schema:name         "KOBRA – Beratungszentrum für Mädchen und Frauen" ;
+    schema:url          <https://www.kobra-berlin.de/> ;
+    schema:memberOf     org:paritaetischer-berlin .
+
+org:paritaetischer-berlin
+    a                   schema:Organization ;
+    schema:name         "Der Paritätische Wohlfahrtsverband – Landesverband Berlin" ;
+    schema:url          <https://www.paritaet-berlin.de/> .
+
+offer:soz-frauen-001
+    a                       cpsv:PublicService, schema:Service ;
+    schema:serviceType      "Sozialberatung zu Lebenslagen, Arbeit & Bildung" ;
+    schema:category         "Soziale Beratung" ;
+    schema:audienceType     "Frauen", "Mädchen", "Von Gewalt betroffene Personen" ;
+    cpsv:providedBy 		org:kobra-berlin .
+
+
+# meta:this meta:source meta:profamilia-db .
+
+org:profamilia-berlin
+    a               schema:Organization ;
+    schema:name     "pro familia Berlin" ;
+    schema:url      <https://www.profamilia.de/angebote-vor-ort/berlin/beratungszentrum> .
+
+offer:schwanger-001
+    a                     cpsv:PublicService, schema:Service ;
+    schema:serviceType    "Schwangerschafts- und Schwangerschaftskonfliktberatung" ;
+    schema:category       "Soziale Beratung" ;
+    schema:audienceType   "Schwangere", "Paare", "Angehörige" ;
+    cpsv:providedBy 	  org:profamilia-berlin .
+
+offer:jugend-001
+    a                     cpsv:PublicService, schema:Service ;
+    schema:serviceType    "Jugendsprechstunde" ;
+    schema:category       "Soziale Beratung" ;
+    schema:audienceType   "Jugendliche", "Junge Erwachsene" ;
+    cpsv:providedBy 	  org:profamilia-berlin .
